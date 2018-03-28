@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+    <h1>8-bit Art</h1>
+    <h3>create your own pixel image</h3>
+    <hr>
+    </div>
+
+   <div class="board">
+    <h5>1.Choose grid size</h5>
+      <input class="btn" type="button" value="small">
+      <input class="btn" type="button" value="medium">
+      <input class="btn" type="button" value="large">
+      <input class="btn custom" type="button" value="custom">
+    <form id="sizePicker">
+      <h6>Height:</h6>
+        <input type="number" id="inputHeight" name="height" min="1" value="1">
+      <h6>Width:</h6>
+        <input type="number" id="inputWeight" name="width" min="1" value="1">
+        <input class="btn create-btn" type="submit" value="create">
+    </form>
+
+    <div>
+     <h5>2.Pick a color</h5>
+     <div class="white color"></div>
+     <div class="black color"></div>
+     <div class="yellow color"></div>
+     <div class="red color"></div>
+     <div class="green color"></div>
+    </div>
+     <h6>or</h6><br>
+     <h6>set custom color:</h6>
+     <input type="color" id="colorPicker">
+     
+     <div>
+       <h5>3.Let's drawing!</h5>
+     </div>
+   </div>
+    
+   <div class="container"> 
+    <h2>Design canvas</h2>
+    <table id="pixelCanvas"></table>
+   </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

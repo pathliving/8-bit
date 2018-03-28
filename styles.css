@@ -1,0 +1,150 @@
+body {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive, sans-serif;
+}
+
+h1 {    
+    font-size: 70px;
+    margin: 0.2em;
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+h3 {
+   font-family: 'Press Start 2P', cursive, sans-serif;
+   font-size: 20px; 
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 11px;
+    display: inline-block;
+    margin: 15px -15px 0px 0px;
+}
+
+hr {
+    width: 40%;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input[type=number] {
+    width: 2em;
+}
+
+.board {
+  float: left;
+  border: 2px solid black;
+  margin: 1em;
+  margin-top: 7em;
+  padding: 1em;
+  width: 20em;
+  position: absolute;
+}
+
+.header {  
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.btn {
+    padding: 1em 1em;
+    background-color: #EFEFEF;
+    border: 2px solid #ccc;
+    font-family: 'Press Start 2P', cursive, sans-serif;
+    font-size: 10px;
+}
+
+.btn:hover {
+    background-color: #808080;
+    color: #fff;
+}
+
+.create-btn {
+    margin-top: 22px;
+}
+
+input.btn {    
+    margin-left: -6px;
+    margin-right: -9px;
+    cursor: pointer;
+}
+
+.custom {    
+    background-color: #BBBBBB;
+}
+
+form {
+    display: none;
+}
+
+#colorPicker {
+    border-width: 0px;
+    padding: 0px 1px;
+    width: 1.4em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.black {
+  background-color: #000;
+}
+
+.yellow {
+  background-color: #feef47;
+}
+
+.red {
+  background-color: #fa1944;
+}
+
+.green {
+  background-color: #19ab21;
+}
+
+.blue {
+  background-color: #1d7cf9;
+}
+
+.color {
+    width: 1em;
+    height: 1em;
+    border: 3px solid #ccc;
+    display: inline-block;
+    cursor: pointer;  
+}
