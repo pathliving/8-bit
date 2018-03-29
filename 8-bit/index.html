@@ -10,19 +10,23 @@
     <h3>create your own pixel image</h3>
     <hr>
     </div>
-
-   <div class="board">
+   
+  <div>
+    <input class="btn settings" type="button" value="settings">
+  </div>
+  
+   <div id="board" class="board visible-brd">
     <h5>1.Choose grid size</h5>
-      <input class="btn" type="button" value="small">
-      <input class="btn" type="button" value="medium">
-      <input class="btn" type="button" value="large">
-      <input class="btn custom" type="button" value="custom">
+      <input class="btn btn-margin small" type="button" value="small">
+      <input class="btn btn-margin" type="button" value="medium">
+      <input class="btn btn-margin" type="button" value="large">
+      <input class="btn custom btn-margin" type="button" value="custom">
     <form id="sizePicker">
       <h6>Height:</h6>
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
+        <input type="number" id="inputHeight" name="height" min="1" value="5" max="50">
       <h6>Width:</h6>
-        <input type="number" id="inputWeight" name="width" min="1" value="1">
-        <input class="btn create-btn" type="submit" value="create">
+        <input type="number" id="inputWidth" name="width" min="1" value="5" max="50">
+        <input class="btn create-btn btn-margin" type="submit" value="create">
     </form>
 
     <div>
@@ -39,6 +43,8 @@
      
      <div>
        <h5>3.Let's drawing!</h5>
+       <hr class="grid-hr">
+       <input class="btn reset" type="button" value="reset">
      </div>
    </div>
     
@@ -46,7 +52,8 @@
     <h2>Design canvas</h2>
     <table id="pixelCanvas"></table>
    </div>
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

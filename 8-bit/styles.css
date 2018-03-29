@@ -35,6 +35,10 @@ hr {
     width: 40%;
 }
 
+.grid-hr {
+    width: 70%;
+}
+
 table,
 tr,
 td {
@@ -60,12 +64,14 @@ input[type=number] {
 
 .board {
   float: left;
+  background-color: #fff;
   border: 2px solid black;
   margin: 1em;
   margin-top: 7em;
   padding: 1em;
   width: 20em;
   position: absolute;
+  z-index: 1;
 }
 
 .header {  
@@ -96,13 +102,26 @@ input[type=number] {
 }
 
 input.btn {    
-    margin-left: -6px;
+    /*margin-left: -6px;*/
     margin-right: -9px;
     cursor: pointer;
 }
 
+.btn-margin {
+    margin-left: -6px;
+}
+
 .custom {    
     background-color: #BBBBBB;
+}
+
+.reset {
+    background-color: #d2fc78;
+    margin: 13px 0px 25px 0px;
+}
+.reset:hover {
+    background-color: #a6ec2f;
+    color: #000;
 }
 
 form {
@@ -147,4 +166,38 @@ form {
     border: 3px solid #ccc;
     display: inline-block;
     cursor: pointer;  
+}
+
+.settings {
+    position: absolute;
+    text-align: center;
+    margin-left: 18em;
+    z-index: 1;
+    background-color: #459fff;
+    color: #fff;
+}
+
+.visible-brd {
+  display: none;
+}
+
+#pixelCanvas {
+  margin-top: 2em;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+/* responsive */
+@media (max-width: 1350px) {
+  hr {
+    width: 36em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .board {
+    display: block;
+  }
 }
