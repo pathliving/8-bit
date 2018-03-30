@@ -16,12 +16,13 @@
   </div>
   
    <div id="board" class="board visible-brd">
+     <input class="btn close" type="button" value="x">
     <h5>1.Choose grid size</h5>
       <input class="btn btn-margin small" type="button" value="small">
       <input class="btn btn-margin" type="button" value="medium">
       <input class="btn btn-margin" type="button" value="large">
       <input class="btn custom btn-margin" type="button" value="custom">
-    <form id="sizePicker">
+    <form id="sizePicker">      
       <h6>Height:</h6>
         <input type="number" id="inputHeight" name="height" min="1" value="5" max="50">
       <h6>Width:</h6>
@@ -29,7 +30,7 @@
         <input class="btn create-btn btn-margin" type="submit" value="create">
     </form>
 
-    <div>
+    <div class="pickColor">
      <h5>2.Pick a color</h5>
      <div class="white color"></div>
      <div class="black color"></div>

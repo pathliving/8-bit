@@ -59,8 +59,25 @@ td {
 }
 
 input[type=number] {
-    width: 2em;
+    width: 3em;
 }
+
+/* Color picker */
+input[type="color" i] {
+    border-style: none;
+    /*background-color: transparent;*/
+    -webkit-appearance: none;
+    border-color: #fff;
+}
+
+#colorPicker {
+    padding: 0px 1px;
+    width: 1.7em;
+    height: 1.8em;
+    cursor: pointer;
+    background-color: #ccc;
+}
+/* End color picker */
 
 .board {
   float: left;
@@ -69,7 +86,7 @@ input[type=number] {
   margin: 1em;
   margin-top: 7em;
   padding: 1em;
-  width: 20em;
+  width: 21em;
   position: absolute;
   z-index: 1;
 }
@@ -128,13 +145,7 @@ form {
     display: none;
 }
 
-#colorPicker {
-    border-width: 0px;
-    padding: 0px 1px;
-    width: 1.4em;
-    height: 1.5em;
-    cursor: pointer;
-}
+
 
 .white {
   background-color: #fff;
@@ -189,7 +200,15 @@ form {
   background-color: #fff;
 }
 
-/* responsive */
+.close {
+  float: right;
+  background-color: #459fff;
+  color: #fff;
+  padding: 0.5em;
+  margin: -1em;
+}
+
+/* RESPONSIVE */
 @media (max-width: 1350px) {
   hr {
     width: 36em;

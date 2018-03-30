@@ -3,6 +3,10 @@ $(".settings").on("click", function () {
   $(".board").toggle(".visible-brd")
 });
 
+$(".close").on("click", function() {
+  $(".board").toggle(".visible-brd")
+});
+
 /* toggle to visible or hidden custom grid size */
 $(".custom").on("click", function() {
   $("form").toggle()
@@ -10,8 +14,7 @@ $(".custom").on("click", function() {
 
 /* generation pixel canvas */
 function makeGrid (height, width) {  
-  
-/* custom grid */  
+
 var height = $("#inputHeight").val();
 var width = $("#inputWidth").val();
 
@@ -69,3 +72,23 @@ $(".reset").on("click", function (e){
   $("td").css("background-color", "#fff");
 });
 
+/* function for converting rgb() to hex color */
+function searchRGB() {
+  let i = colorPicked;
+  let rgbValues = i.split("(")[1].split(")")[0].split(", ");
+  return rgbValues;
+}
+
+function componentToHex(c) {
+  var hex = Number(c).toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+$('.pickColor').on('click', function(evt) {
+  colorPicked = $(evt.target).css("background-color");
+  $('#colorPicker').val(rgbToHex(searchRGB()[0], searchRGB()[1], searchRGB()[2]));
+});
