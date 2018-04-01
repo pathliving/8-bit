@@ -13,31 +13,41 @@ $(".custom").on("click", function() {
 });
 
 /* generation pixel canvas */
-function makeGrid (height, width) {  
-
-var height = $("#inputHeight").val();
-var width = $("#inputWidth").val();
-
-
-$("#pixelCanvas").html("");
-for (var h = 0; h < height; h++) {
+function makeGrid (height, width) {
+    
+  $("#pixelCanvas").html("");
+  
+  for (var h = 0; h < height; h++) {  
   $("#pixelCanvas").append("<tr></tr>");
-}
+  }
 
-$("tr").each(function() {
-  for(var w = 0; w < width; w++) {
-    $(this).append("<td></td>");
-    }
-  });
+  $("tr").each(function() {
+    for(var w = 0; w < width; w++) {
+      $(this).append("<td></td>");
+      }
+    });
 }
 
 $(document).ready(function() {
-  $("#sizePicker").on("submit", function (buildGrid) {
-    makeGrid();
-    buildGrid.preventDefault();
-  });  
+  $(".small").on("click", function(e) {
+  e.preventDefault();
+  makeGrid(35,35);
 });
-
+  $(".medium").on("click", function(e) {
+    e.preventDefault();
+    makeGrid(55,55);
+  });
+  $(".large").on("click", function(e) {
+    e.preventDefault();
+    makeGrid(55,75);
+  });
+  $("#sizePicker").on("submit", function(e) {
+    e.preventDefault();
+    var height = $("#inputHeight").val();
+    var width = $("#inputWidth").val();
+    makeGrid(height, width);
+  });
+});
 
 /* click and move to add color to multiple cells */
 $("#pixelCanvas").on("mousedown", "td", function(event) {
@@ -59,11 +69,6 @@ $("#pixelCanvas").on("mousedown", "td", function(event) {
         return false;
      });
 }
-});
-
-/* double click to remove color */
-$("#pixelCanvas").on("dblclick", "td", function() {
-  $(this).attr("bgcolor", "#ffcc66");
 });
 
 /* reset button */
