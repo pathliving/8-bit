@@ -12,6 +12,7 @@ $(".custom").on("click", function() {
   $("form").toggle()
 });
 
+
 /* generation pixel canvas */
 function makeGrid (height, width) {
     
@@ -27,6 +28,7 @@ function makeGrid (height, width) {
       }
     });
 }
+
 
 $(document).ready(function() {
   $(".small").on("click", function(e) {
@@ -75,6 +77,12 @@ $("#pixelCanvas").on("mousedown", "td", function(event) {
 $(".reset").on("click", function (e){
   e.preventDefault();
   $("td").css("background-color", "#fff");
+});
+
+/* toggle grid button */
+$(".toggle-grid").on("click", function (e){
+  e.preventDefault();
+  $("tr, td").toggleClass("toggle-border");
 });
 
 /* function for converting rgb() to hex color */

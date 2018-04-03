@@ -42,11 +42,11 @@ hr {
 table,
 tr,
 td {
-    border: 1px solid black;
+    border: 1px solid #000;
 }
 
-.td-border {
-    border: 1px solid white;
+.toggle-border {
+    border: 1px solid transparent;
 }
 
 table {
@@ -87,7 +87,7 @@ input[type="color" i] {
   float: left;
   background-color: #fff;
   border: 2px solid black;
-  margin: 1em;
+  margin: 1.1em;
   margin-top: 7em;
   padding: 1em;
   width: 21em;
@@ -136,20 +136,28 @@ input.btn {
     background-color: #BBBBBB;
 }
 
-.reset {
+.toggle-grid {
     background-color: #d2fc78;
     margin: 13px 0px 25px 0px;
 }
-.reset:hover {
+.toggle-grid:hover {
     background-color: #a6ec2f;
     color: #000;
+}
+
+.reset {
+  background-color: #FC748F;
+  margin: 13px 0px 25px 0px;
+}
+
+.reset:hover {
+  background-color: #F1161C;
+  color: #000;
 }
 
 form {
     display: none;
 }
-
-
 
 .white {
   background-color: #fff;
@@ -183,15 +191,6 @@ form {
     cursor: pointer;  
 }
 
-.settings {
-    position: absolute;
-    text-align: center;
-    margin-left: 18em;
-    z-index: 1;
-    background-color: #459fff;
-    color: #fff;
-}
-
 .visible-brd {
   display: none;
 }
@@ -205,12 +204,25 @@ form {
   background-color: #fff;
 }
 
+.settings {
+    position: absolute;
+    text-align: center;
+    margin-left: 18em;
+    z-index: 1;
+    background-color: #459fff;
+    color: #fff;
+}
+
 .close {
   float: right;
   background-color: #459fff;
   color: #fff;
   padding: 0.5em;
   margin: -1em;
+}
+
+.close:hover, .settings:hover {
+  background-color: #007DFB;
 }
 
 /* RESPONSIVE */
