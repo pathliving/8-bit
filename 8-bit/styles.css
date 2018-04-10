@@ -42,7 +42,8 @@ hr {
 table,
 tr,
 td {
-    border: 1px solid #000;
+    border: 1px solid #ccc;
+    background-color: #fff;
 }
 
 .toggle-border {
@@ -55,11 +56,11 @@ table {
 }
 
 tr {
-    height: 10px;
+    height: 12px;
 }
 
 td {
-    width: 10px;
+    width: 12px;
 }
 
 input[type=number] {
@@ -87,7 +88,7 @@ input[type="color" i] {
   float: left;
   background-color: #fff;
   border: 2px solid black;
-  margin: 1.1em;
+  margin: 0.9em;
   margin-top: 7em;
   padding: 1em;
   width: 21em;
@@ -111,11 +112,13 @@ input[type="color" i] {
     border: 2px solid #ccc;
     font-family: 'Press Start 2P', cursive, sans-serif;
     font-size: 10px;
+  color: #333333;
 }
 
 .btn:hover {
     background-color: #808080;
     color: #fff;
+    border-color: #515151;
 }
 
 .create-btn {
@@ -138,21 +141,34 @@ input.btn {
 
 .toggle-grid {
     background-color: #d2fc78;
-    margin: 13px 0px 25px 0px;
+    margin: 2px 0px 25px 0px;
 }
 .toggle-grid:hover {
     background-color: #a6ec2f;
     color: #000;
+    border-color: #515151;
 }
 
 .reset {
   background-color: #FC748F;
-  margin: 13px 0px 25px 0px;
+  margin: 2px 0px 25px -10px;
 }
 
 .reset:hover {
   background-color: #F1161C;
   color: #000;
+  border-color: #515151;
+}
+
+.save {
+  background-color: #FFF9B0;
+  margin: 2px 0px 25px 0px;
+}
+
+.save:hover {
+  background-color: #FEEF47;
+  color: #000;
+  border-color: #515151;
 }
 
 form {
@@ -218,6 +234,7 @@ form {
   background-color: #459fff;
   color: #fff;
   padding: 0.5em;
+  padding-left: 7px;
   margin: -1em;
 }
 
@@ -236,4 +253,14 @@ form {
   .board {
     display: block;
   }
+}
+
+/* hide save button on Firefox, IE and Edge browsers */
+.save {
+  display: none;
+}
+
+/* supports only WebKit browsers because don't work on other engines */
+.save:not(*:root) { 
+  display: inline-block;
 }

@@ -12,7 +12,6 @@ $(".custom").on("click", function() {
   $("form").toggle()
 });
 
-
 /* generation pixel canvas */
 function makeGrid (height, width) {
     
@@ -29,7 +28,6 @@ function makeGrid (height, width) {
     });
 }
 
-
 $(document).ready(function() {
   $(".small").on("click", function(e) {
   e.preventDefault();
@@ -37,11 +35,11 @@ $(document).ready(function() {
 });
   $(".medium").on("click", function(e) {
     e.preventDefault();
-    makeGrid(55,55);
+    makeGrid(45,55);
   });
   $(".large").on("click", function(e) {
     e.preventDefault();
-    makeGrid(55,75);
+    makeGrid(50,75);
   });
   $("#sizePicker").on("submit", function(e) {
     e.preventDefault();
@@ -53,8 +51,7 @@ $(document).ready(function() {
 
 /* click and move to add color to multiple cells */
 $("#pixelCanvas").on("mousedown", "td", function(event) {
-   event.preventDefault();
-   
+   event.preventDefault();   
   
   if (event.buttons === 1) {     
     
@@ -104,4 +101,16 @@ function rgbToHex(r, g, b) {
 $('.pickColor').on('click', function(evt) {
   colorPicked = $(evt.target).css("background-color");
   $('#colorPicker').val(rgbToHex(searchRGB()[0], searchRGB()[1], searchRGB()[2]));
+});
+
+/* function to save table canvas as .PNG file */
+$('.save').click(function(){
+    html2canvas($("#pixelCanvas").get(0), {
+      onrendered: function (canvas) {
+        var a = document.createElement('a');
+        a.href = canvas.toDataURL("image/png");
+        a.download = 'MyPixelArt.png';
+        a.click();
+    }
+  });
 });
