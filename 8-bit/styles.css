@@ -13,13 +13,14 @@ h2 {
   margin: 1em 0 0.25em;
 }
 
-h2:first-of-type {
-  margin-top: 0.5em;
+h2:first-of-type, .settings {
+  margin-top: 1em;
 }
 
 h3 {
   font-family: 'Press Start 2P', cursive, sans-serif;
-  font-size: 20px; 
+  font-size: 20px;
+  margin-bottom: 1.4em; 
 }
 
 h5 {
@@ -53,7 +54,7 @@ tr {
 }
 
 td {
-  width: 12px;
+  width: 11px;
   border-width: 1px;
 }
 
@@ -280,17 +281,11 @@ input.btn {
   .board {
     margin: 3.8em 10em;
   }
-  h2:first-of-type {
-    margin-top: 1em;
-  }
 } 
 
 @media (min-width: 685px) and (max-width: 700px) {
   .board {
     margin: 3.8em 8.5em;
-  }
-  h2:first-of-type {
-    margin-top: 1em;
   }
 } 
 
@@ -300,9 +295,6 @@ input.btn {
   }
   .board {
     margin: 3.8em 7.7em;
-  }
-  h2:first-of-type {
-    margin-top: 1em;
   }
 }
 
@@ -388,12 +380,18 @@ input.btn {
   .board {
     margin-left: 0.85em;
   }
+  .notice {
+    display: inline-block;
+    margin-top: 4.3em;
+    border: solid 2px #FA1944;
+    padding: 1em;
+  }
 }
 
 /* For iPhone 5 (landscape) and other */
 @media (min-width: 550px) and (max-width: 600px) {
   .settings {
-    margin: 3em 8.3em;
+    margin: 4em 8.3em;
   }
   .board {
     margin: 4.9em 3em; 
@@ -402,7 +400,7 @@ input.btn {
 /* For iPhone 4 (landscape) and other */
 @media (min-width: 480px) and (max-width: 500px) {
   .settings {
-    margin: 3em 6em;
+    margin: 4em 6em;
   }
   .board {
     margin: 4.9em 2.3em; 
