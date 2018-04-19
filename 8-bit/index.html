@@ -1,62 +1,73 @@
-<html>
+<html lang="en">
 <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pixel Art Maker!</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="header">
-    <h1>8-bit Art</h1>
-    <h3>create your own pixel image</h3>
-    <hr>
+    	<h1>8-bit Art</h1>
+    	<h3>create your own pixel image</h3>
+    	<hr>
     </div>
    
-  <div>
-    <input class="btn settings" type="button" value="settings">
-  </div>
-  
-   <div id="board" class="board visible-brd">
-     <input class="btn close" type="button" value="x">
-    <h5>1.Choose grid size</h5>
+	  <div>
+	    <input class="btn settings" type="button" value="settings">
+	  </div>
+
+  	<!-- Sidebar -->
+   	<div id="board" class="board visible-brd">
+     	<input class="btn close" type="button" value="x">
+
+    	<h5>1.Choose grid size</h5>
       <input class="btn btn-margin small" type="button" value="small">
       <input class="btn btn-margin medium" type="button" value="medium">
       <input class="btn btn-margin large" type="button" value="large">
       <input class="btn btn-margin custom" type="button" value="custom">
-    <form id="sizePicker">      
-      <h6>Height:</h6>
-        <input type="number" id="inputHeight" name="height" min="1" value="50" max="146">
-      <h6>Width:</h6>
-        <input type="number" id="inputWidth" name="width" min="1" value="50" max="146">
-        <input class="btn create-btn btn-margin" type="submit" value="create">
-    </form>
 
-    <div class="pickColor">
-     <h5>2.Pick a color</h5>
-     <div class="white color"></div>
-     <div class="black color"></div>
-     <div class="yellow color"></div>
-     <div class="red color"></div>
-     <div class="green color"></div>
-    </div>
-     <h6>or</h6><br>
-     <h6>set custom color:</h6>
-     <input type="color" id="colorPicker">
-     
-     <div>
-       <h5>3.Let's drawing!</h5>       
-       <input class="btn btn-margin reset" type="button" value="reset">
-       <input class="btn btn-margin toggle-grid" type="button" value="toggle grid">
-       <input class="btn btn-margin save" type="button" value="save">
-     </div>
-   </div>
-    
-   <div class="container"> 
-    <h2>Design canvas</h2>
-    <table id="pixelCanvas"></table>
-   </div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    	<form id="sizePicker">      
+      <h6>Height:</h6>
+        <input type="number" id="inputHeight" name="height" min="1" value="50" max="100">
+      <h6>Width:</h6>
+        <input type="number" id="inputWidth" name="width" min="1" value="50" max="100">
+        <input class="btn create-btn btn-margin" type="submit" value="create">
+    	</form>
+    	
+     	<h5>2.Pick a color</h5>
+   		<div id="colors">
+     		<div class="white color"></div>
+     		<div class="black color"></div>
+     		<div class="yellow color"></div>
+     		<div class="red color"></div>
+     		<div class="green color"></div>
+     	</div>    	
+     	<h6>or</h6><br>
+     	<h6>set custom color:</h6>
+     	<input type="color" id="colorPicker">     
+     	
+      <h5>3.Let's drawing!</h5>       
+      <input class="btn btn-margin reset" type="button" value="reset">
+      <input class="btn btn-margin toggle-grid" type="button" value="toggle grid">
+      <input class="btn btn-margin save" type="button" value="save">     	
+   	</div>
+
+   	<!-- Canvas/Grid -->
+   	<div class="container"> 
+    	<h2>Design canvas</h2>
+    	<h3 class="notice">Please rotate your device to landscape orientation</h3>
+    	<table id="pixelCanvas"></table>
+   	</div>    
+  
+  <!-- Disable content for IE -->  
+  <noscript>
+    Your browser is out of date, and may not be compatible with our website. A list of the most popular web browsers can be found below. Just click on the links to get to the download page <a href="https://www.google.com/chrome/" target="_blank">Chrome</a>, <a href="https://www.mozilla.org/en-US/firefox/" target="_blank">Firefox</a>, <a href="http://www.opera.com/download/" target="_blank">Opera</a>.
+    <style type="text/css">div, #board {display: none;}</style>
+  </noscript>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+  <script src="main.js"></script>
 </body>
 </html>

@@ -1,99 +1,73 @@
 body {
-    text-align: center;
-    font-family: 'Press Start 2P', cursive, sans-serif;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  overflow-y: scroll;
 }
 
 h1 {    
-    font-size: 70px;
-    margin: 0.2em;
+  font-size: 70px;
+  margin: 0.2em;
 }
 
 h2 {
-    margin: 1em 0 0.25em;
+  margin: 1em 0 0.25em;
 }
 
 h2:first-of-type {
-    margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 
 h3 {
-   font-family: 'Press Start 2P', cursive, sans-serif;
-   font-size: 20px; 
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  font-size: 20px; 
 }
 
 h5 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 h6 {
-    font-size: 11px;
-    display: inline-block;
-    margin: 15px -15px 0px 0px;
+  font-size: 11px;
+  display: inline-block;
+  margin: 15px -15px 0px 0px;
 }
 
 hr {
-    width: 40%;
+  width: 40%;
 }
 
 .grid-hr {
-    width: 70%;
+  width: 70%;
 }
 
 table,
 tr,
 td {
-    border: 1px solid #ccc;
-    background-color: #fff;
-}
-
-.toggle-border {
-    border: 1px solid transparent;
-}
-
-table {
-    border-collapse: collapse;
-    margin: 0 auto;
+  border: 1px solid #ccc;
+  background-color: #fff;
 }
 
 tr {
-    height: 12px;
+  height: 12px;
+  border-width: 1px;
 }
 
 td {
-    width: 12px;
+  width: 12px;
+  border-width: 1px;
+}
+
+.toggle-border {
+  border: 1px solid transparent;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
 }
 
 input[type=number] {
-    width: 3em;
-}
-
-/* Color picker */
-input[type="color" i] {
-    border-style: none;
-    /*background-color: transparent;*/
-    -webkit-appearance: none;
-    border-color: #fff;
-}
-
-#colorPicker {
-    padding: 0px 1px;
-    width: 1.7em;
-    height: 1.8em;
-    cursor: pointer;
-    background-color: #ccc;
-}
-/* End color picker */
-
-.board {
-  float: left;
-  background-color: #fff;
-  border: 2px solid black;
-  margin: 0.9em;
-  margin-top: 7em;
-  padding: 1em;
-  width: 21em;
-  position: absolute;
-  z-index: 1;
+  width: 3em;
 }
 
 .header {  
@@ -106,47 +80,89 @@ input[type="color" i] {
   width: 100%;
 }
 
+/* Canvas/Grid */
+#pixelCanvas {
+  display: inline-block;
+  margin: 3em 0em 3em 0em;
+}
+
+/* Sidebar */
+.board {
+  float: left;
+  background-color: #fff;
+  border: 2px solid black;
+  margin: 0.9em;
+  margin-top: 7em;
+  padding: 1em;
+  width: 21em;
+  position: absolute;
+  z-index: 1;
+}
+
+form {
+  display: none;
+}
+
+.visible-brd {
+  display: none;
+}
+
+/* Color picker */
+input[type="color" i] {
+  border-style: none;
+  -webkit-appearance: none;
+  border-color: #fff;
+}
+
+#colorPicker {
+  padding: 0px 1px;
+  width: 1.7em;
+  height: 1.8em;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+/* Buttons */
 .btn {
-    padding: 1em 1em;
-    background-color: #EFEFEF;
-    border: 2px solid #ccc;
-    font-family: 'Press Start 2P', cursive, sans-serif;
-    font-size: 10px;
+  padding: 1em 1em;
+  background-color: #EFEFEF;
+  border: 2px solid #ccc;
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  font-size: 10px;
   color: #333333;
 }
 
 .btn:hover {
-    background-color: #808080;
-    color: #fff;
-    border-color: #515151;
+  background-color: #808080;
+  color: #fff;
+  border-color: #515151;
 }
 
 .create-btn {
-    margin-top: 22px;
+  margin-top: 22px;
 }
 
 input.btn {    
-    /*margin-left: -6px;*/
-    margin-right: -9px;
-    cursor: pointer;
+  margin-right: -9px;
+  cursor: pointer;
 }
 
 .btn-margin {
-    margin-left: -6px;
+  margin-left: -6px;
 }
 
 .custom {    
-    background-color: #BBBBBB;
+  background-color: #BBBBBB;
 }
 
 .toggle-grid {
-    background-color: #d2fc78;
-    margin: 2px 0px 25px 0px;
+  background-color: #d2fc78;
+  margin: 2px 0px 25px 0px;
 }
 .toggle-grid:hover {
-    background-color: #a6ec2f;
-    color: #000;
-    border-color: #515151;
+  background-color: #a6ec2f;
+  color: #000;
+  border-color: #515151;
 }
 
 .reset {
@@ -171,8 +187,25 @@ input.btn {
   border-color: #515151;
 }
 
-form {
-    display: none;
+.close {
+  float: right;
+  background-color: #459fff;
+  color: #fff;
+  padding: 0.5em;
+  margin: -1em;
+}
+
+.settings {
+  position: absolute;
+  text-align: center;
+  margin-left: 18em;
+  z-index: 1;
+  background-color: #459fff;
+  color: #fff;
+}
+
+.close:hover, .settings:hover {
+  background-color: #007DFB;
 }
 
 .white {
@@ -200,67 +233,179 @@ form {
 }
 
 .color {
-    width: 1em;
-    height: 1em;
-    border: 3px solid #ccc;
-    display: inline-block;
-    cursor: pointer;  
+  width: 1em;
+  height: 1em;
+  border: 3px solid #ccc;
+  display: inline-block;
+  cursor: pointer;  
 }
 
-.visible-brd {
-  display: none;
-}
-
-#pixelCanvas {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-.bg-white {
-  background-color: #fff;
-}
-
-.settings {
-    position: absolute;
-    text-align: center;
-    margin-left: 18em;
-    z-index: 1;
-    background-color: #459fff;
-    color: #fff;
-}
-
-.close {
-  float: right;
-  background-color: #459fff;
-  color: #fff;
-  padding: 0.5em;
-  padding-left: 7px;
-  margin: -1em;
-}
-
-.close:hover, .settings:hover {
-  background-color: #007DFB;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1350px) {
-  hr {
-    width: 36em;
-  }
-}
-
-@media (min-width: 1440px) {
-  .board {
-    display: block;
-  }
-}
-
-/* hide save button on Firefox, IE and Edge browsers */
+/* Hide save button on Firefox, IE and Edge browsers */
 .save {
   display: none;
 }
 
-/* supports only WebKit browsers because don't work on other engines */
+/* Supports only WebKit browsers because don't work on other engines */
 .save:not(*:root) { 
   display: inline-block;
 }
+
+.notice {
+  display: none;
+}
+
+/* Desktop */
+/*////////////
+////////////*/
+
+/* Laptop */
+@media (max-width: 1366px) {
+  hr {
+    width: 36em;
+  }  
+}
+
+@media (min-width: 1350px) {
+  .visible-brd {
+    display: block;
+  }  
+}
+
+/* Tablet */
+/*////////////
+////////////*/
+
+/* Mobile landscape orientation */
+@media (min-width: 720px) and (max-width: 750px) {
+  .board {
+    margin: 3.8em 10em;
+  }
+  h2:first-of-type {
+    margin-top: 1em;
+  }
+} 
+
+@media (min-width: 685px) and (max-width: 700px) {
+  .board {
+    margin: 3.8em 8.5em;
+  }
+  h2:first-of-type {
+    margin-top: 1em;
+  }
+} 
+
+@media (min-width: 650px) and (max-width: 680px) {  
+  tr {
+    height: 12px;
+  }
+  .board {
+    margin: 3.8em 7.7em;
+  }
+  h2:first-of-type {
+    margin-top: 1em;
+  }
+}
+
+/* Mobile portrait orientation */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  hr {
+    width: 90%;
+  }
+
+  .settings {
+    position: absolute;
+    margin: 4em;
+    left: 25%;
+  }
+
+  .board {
+    width: 73%;
+    margin: 5.8em 7.7em;
+  }
+
+  .custom {
+    margin-top: 0.1em;
+  }
+
+  .save {
+    margin-top: -1.8em;
+    position: absolute;
+    margin: 5em -4em;
+  }
+
+  .close {
+    padding-left: 6px;
+  }
+
+  .reset {
+    position: absolute;
+    margin: 5em -2em;
+  }
+
+  .toggle-grid {
+    margin-bottom: 7em;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 470px) {
+  #pixelCanvas {
+    display: none;
+  }
+  .notice {
+    display: inline-block;
+    margin-top: 4.3em;
+    border: solid 2px #FA1944;
+    padding: 1em;
+  }
+  h6 {
+    margin: 15px -17px 0px -8px;
+  }
+  .create-btn {
+    margin-top: 1em;
+  }
+  .board {    
+    margin-left:  1.33em;
+  }
+}
+
+@media (max-width: 350px) {
+  .settings {
+    margin: 4em 0;
+    left: 10em;
+  }
+  .board {
+    margin-left: 0.85em;
+  }
+}
+
+/* For iPhone 5 (landscape) and other */
+@media (min-width: 550px) and (max-width: 600px) {
+  .settings {
+    margin: 3em 8.3em;
+  }
+  .board {
+    margin: 4.9em 3em; 
+  }
+}
+/* For iPhone 4 (landscape) and other */
+@media (min-width: 480px) and (max-width: 500px) {
+  .settings {
+    margin: 3em 6em;
+  }
+  .board {
+    margin: 4.9em 2.3em; 
+  }
+}
+
