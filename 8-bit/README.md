@@ -20,19 +20,19 @@ How it work
 
 2. Choose grid size:
 
-`small, medium, large or custom [from 1x1 to 100x100]`
+		small, medium, large or custom [from 1x1 to 100x100]
 
 3. Pick a color:
 
-`on board [white, black, yellow, red, green] or custom`
+		on board [white, black, yellow, red, green] or custom
 
 4. Drawing:
 
-`drawing on the grid and use white color for erasing unnecessary pixels`
+		drawing on the grid and use white color for erasing unnecessary pixels
 
 5. Save your pixel image: 
 
-`only for Chrome/Opera browsers`
+		only for Chrome/Opera browsers
 
 Built with
 ---
