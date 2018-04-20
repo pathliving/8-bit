@@ -274,8 +274,11 @@ input.btn {
 }
 
 /* Tablet */
-/*////////////
-////////////*/
+@media (min-width: 768px) {
+  .board {
+    display: block;
+  }
+}
 
 /* Mobile landscape orientation */
 @media (min-width: 720px) and (max-width: 750px) {

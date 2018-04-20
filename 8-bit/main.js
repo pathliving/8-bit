@@ -87,8 +87,8 @@ $(".toggle-grid").on("click", function (e){
 
 /* Function for converting rgb() to hex color */
 function searchRGB() {
-  let i = colorPicked;
-  let rgbValues = i.split("(")[1].split(")")[0].split(", ");
+  var i = colorPicked;
+  var rgbValues = i.split("(")[1].split(")")[0].split(", ");
   return rgbValues;
 }
 
