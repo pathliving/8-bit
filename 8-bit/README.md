@@ -6,12 +6,10 @@
 
 The project was created exclusively for ~~educational purposes~~ the purpose of adding it to the portfolio in the future
 
-Examples
+Example
 ---
 
-<img src="examples/1.png" width="900">
-<img src="examples/2.png" width="900">
-<img src="examples/3.png" width="900">
+<img src="examples/8-bit.gif" width="900">
 
 How it work
 ---
