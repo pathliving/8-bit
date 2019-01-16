@@ -14,7 +14,7 @@ Example
 How it work
 ---
 
-1. Open link: https://pathliving.github.io/8-bit
+1. Open link: https://pathliving.github.io/8-bit/
 
 2. Choose grid size:
 
