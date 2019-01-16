@@ -37,11 +37,13 @@ Built with
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [jQuery](http://api.jquery.com/)
+* [jQuery](http://api.jquery.com/) 
 
 Links
 ---
 
 This project was using [GitHub Pages](https://pages.github.com/)
+
+And with color picker [jscolor](http://jscolor.com)
 
 Thanks for the idea [Una Kravets](https://una.im/sass-pixel-art/)
