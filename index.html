@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pixel Art Maker!</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -21,7 +21,7 @@
 		<button class="btn settings" type="button" value="settings">settings</button>
 	</div>
 
-	<!-- Sidebar -->
+	<!-- Board -->
 	<div id="board" class="board visible-brd">
 		<input class="btn close" type="button" value="x">
 
@@ -29,8 +29,8 @@
 		<button class="btn btn-margin small" type="button" value="small">small</button>
 		<button class="btn btn-margin medium" type="button" value="medium">medium</button>
 		<button class="btn btn-margin large" type="button" value="large">large</button>
-		<button class="btn btn-margin custom" type="button" value="custom">custom</button>
 
+		<button class="btn btn-margin custom" type="button" value="custom">custom</button>
 		<form id="sizePicker" class="size-picker">      
 		<h6 class="picker-title">Height:</h6>
 			<input type="number" id="inputHeight" name="height" min="1" value="50" max="100">
@@ -45,6 +45,7 @@
 		<button class="yellow color" onclick="document.getElementById('colorPicker').jscolor.fromString('fff018')"></button>
 		<button class="red color" onclick="document.getElementById('colorPicker').jscolor.fromString('ff0000')"></button>
 		<button class="green color" onclick="document.getElementById('colorPicker').jscolor.fromString('11b617')"></button>
+
 		<h6 class="custom-title">or</h6><br>
 		<h6 class="custom-title">set custom color:</h6>
 		<span class="color-picker"><input class="jscolor" style="width:50px; height:20px;" id="colorPicker" type="button" value="21B0FF"></span>
@@ -72,7 +73,7 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="jscolor.js"></script>
-  <script src="main.js"></script>
+	<script src="jscolor.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>
