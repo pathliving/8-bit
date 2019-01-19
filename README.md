@@ -39,6 +39,22 @@ Built with
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [jQuery](http://api.jquery.com/) 
 
+Support
+---
+1) Cross-browser compatibility 
+
+		Chrome, Opera, Edge
+		Firefox and IE - disable content (styles render incorrectly)
+
+2) Cross-platform
+
+		 Chrome, Opera, Edge - on Windows
+		 Chrome, Opera, Safari - on OSX
+
+3) Responsive, adaptive and mobile compatibility client-side
+
+		Desktop, laptop, tablet, fablet, mobile
+
 Links
 ---
 
