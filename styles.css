@@ -25,7 +25,6 @@ h6 {
 
 hr {
 	width: 35.5rem;
-	/* border: 2px solid #000; */
 	margin-top: -0.56rem;
 	height: 3px;
 	background-color: #000;
@@ -34,16 +33,13 @@ hr {
 
 hr:nth-last-child(2) {
 	width: 35rem;
-	/* border: 2px solid #000; */
 	margin-top: 1.4rem;
 	height: 4px;
 	background-color: #000;
 	border: none;
 }
 
-table,
-tr,
-td {
+table, tr, td {
 	border: 0.0625rem solid #ccc;
 	background-color: #fff;
 }
@@ -212,7 +208,8 @@ input[type="color" i] {
 .color-picker::after {
 	border-top: 0.125rem;
     border-bottom: 0.125rem;
-    left: -0.25em;
+	/* left: -0.25em; */
+	left: 9.7rem;
     width: 1rem;
     height: 1rem;
 }
@@ -685,13 +682,104 @@ input[type="color" i] {
 	margin-bottom: 1.46rem;
 }
 
+/* Styles only for FireFox browser */
 @-moz-document url-prefix() {
-  /* hide content from firefox browser because styles are incorrect rendering */
-  #board, .header, .sub-header, .canvas {
-		display: none;
+	.btn-margin {
+		margin-top: -3.5em;
 	}
-	.only-firefox {
-		display: block;
+
+	.color-picker::before {
+		width: 1.1rem;
+	}
+
+	.color-picker::after {
+		width: 1.07rem;
+		margin-left: -0.007rem;
+	}
+
+	.white::before, .white::after, .black::before, .black::after, .yellow::before, .yellow::after, .red::before, .red::after, .green::before, .green::after {
+		width: 1.1em;
+	}
+
+	.small:hover, .medium:hover, .large:hover, .custom:hover, .create:hover {
+    box-shadow: inset 0.24rem 0.39rem #adafbc;
+	}
+
+	.reset {
+    box-shadow: inset -0.26rem -0.43rem #8c2022;
+	}
+
+	.toggle-grid {
+    box-shadow: inset -0.26rem -0.43rem #4aa52e;
+	}
+
+	.size-picker {
+		margin-top: 1.125rem;
+		width: 101%;
+	}
+
+	.create {
+		margin-top: 1.5em;
+		box-shadow: inset -0.3rem -0.44rem #adafbc;
+	}
+
+	.create:hover {
+		box-shadow: inset 0.27rem 0.24rem #adafbc;
+	}
+}
+
+/* Styles only for Edge browser */
+@supports (-ms-ime-align:auto) {
+	.btn-margin {
+		margin-left: -0.40625rem;
+	}
+
+	.btn {
+		padding: 1em 1.05em;
+		margin-top: -0.34375rem;
+	}
+
+	.size-picker {
+		margin-top: 1.563rem;
+		width: 101%;
+	}
+
+	.board {
+		margin-top: 15em;
+		margin-left: 2em;		
+		top: 0;
+	}
+
+	.toggle-grid {
+		box-shadow: inset -0.3rem -0.33rem #4aa52e;
+	}
+
+	.reset {
+		box-shadow: inset -0.3rem -0.33rem #8c2022;
+	}
+
+	.create {
+		box-shadow: inset -0.33rem -0.3125rem #adafbc;
+	}
+
+	.close {
+		padding: 0.5em;
+	}
+
+	.white::before, .white::after, .black::before, .black::after, .yellow::before, .yellow::after, .red::before, .red::after, .green::before, .green::after {
+		width: 0.95em;
+	}
+
+	.demo {
+		margin: -2.8em 0 0 7em;
+	}
+
+	.settings {
+		margin: -2.8em 0 0 17em;
+	}
+
+	.color-picker::after {
+		margin-left: 0.05rem;
 	}
 }
 
