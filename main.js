@@ -1,24 +1,24 @@
 /* Toggle to visible or hidden board with settings */
-$(".settings").on("click", function () {
+$(".js-settings").on("click", function () {
 	$(".board").toggle(".visible-brd");
 });
 
-$(".close").on("click", function() {
+$(".js-close").on("click", function() {
 	$(".board").toggle(".visible-brd");
 });
 
 $(document).ready(function() {
-	$(".small").on("click", function(e) {
+	$(".js-small").on("click", function(e) {
 		e.preventDefault();
 		makeGrid(35,35);
 	});
 
-	$(".medium").on("click", function(e) {
+	$(".js-medium").on("click", function(e) {
 		e.preventDefault();
 		makeGrid(45,55);
 	});
 
-	$(".large").on("click", function(e) {
+	$(".js-large").on("click", function(e) {
 		e.preventDefault();
 		makeGrid(50,75);
 	});
@@ -32,7 +32,7 @@ $(document).ready(function() {
 });
 
 /* Toggle to visible or hidden custom grid size */
-$(".custom").on("click", function() {
+$(".js-custom").on("click", function() {
 	$("form").toggle();
 });
 
@@ -53,16 +53,14 @@ function makeGrid (height, width) {
 
 /* Click and move to add color to multiple cells */
 $("#pixelCanvas").on("mousedown", "td", function(event) {
-	event.preventDefault();   
 	
 	if (event.buttons === 1) {    
 		var colorCell = $("#colorPicker").val();
-		$(this).attr("bgcolor", colorCell);
-		
-		$(event.target).css("background-color", colorCell); 
+
+		$(event.target).css("background-color", "#" + colorCell); 
 
 		$("#pixelCanvas").on("mouseenter", "td", function(e) { 
-			$(e.target).css("background-color", colorCell); 
+			$(e.target).css("background-color", "#" + colorCell);
 		});  
 
 		$("#pixelCanvas").on("mouseup mouseleave", function(e) {
@@ -74,19 +72,19 @@ $("#pixelCanvas").on("mousedown", "td", function(event) {
 });
 
 /* Reset button */
-$(".reset").on("click", function (e) {
+$(".js-reset").on("click", function (e) {
 	e.preventDefault();
 	$("td").css("background-color", "#fff");
 });
 
 /* Toggle grid button */
-$(".toggle-grid").on("click", function (e) {
+$(".js-toggle-grid").on("click", function (e) {
 	e.preventDefault();
 	$("tr, td").toggleClass("toggle-border");
 });
 
 /* Function to save table canvas as .PNG file */
-$(".save").click(function() {
+$(".js-save").click(function() {
 	html2canvas($("#pixelCanvas").get(0), {
 		onrendered: function (canvas) {
 			var a = document.createElement("a");
