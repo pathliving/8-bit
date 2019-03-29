@@ -43,13 +43,13 @@ Support
 ---
 1) Cross-browser compatibility 
 
-		Chrome, Firefox, Edge, Opera
+		Chrome, Firefox, Safari, Edge, Opera
 		IE - disable content (styles are rendering incorrectly)
 
 2) Cross-platform
 
-		 Chrome, Firefox, Edge, Opera - on Windows
-		 Chrome, Firefox, Safari, Opera - on OSX
+		Chrome, Firefox, Edge, Opera - on Windows
+		Chrome, Firefox, Safari, Opera - on OSX
 
 3) Responsive, adaptive and mobile compatibility client-side
 
